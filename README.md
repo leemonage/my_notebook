@@ -1,2 +1,4 @@
 # my_notebook
-some often used algorithms
+
+This repository contains my C++ implementation of the most used algorithms.
+Just for fun (and a little more).
