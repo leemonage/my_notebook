@@ -1,5 +1,5 @@
 /**
-  * maxflow O(V^2 E)
+  *  maxflow O(V^2 E)
   */
 
 struct flow_network {
