@@ -66,7 +66,7 @@ struct mincost {
             }
     }
 
-    void work(int expected_flow) {
+    ll work(int expected_flow) {
         bool run;
         vector<ll> D(n, INF * INF), phi;
         vector<int> pr(n);
@@ -130,27 +130,9 @@ struct mincost {
             used.assign(n, false);
         }
 
-        if (flow != expected_flow) {
-            cout << -1 << endl;
-            return ;
-        }
+        if (flow != expected_flow)
+            return -1;
 
-        cout << setprecision(9) << fixed << (double) cost / flow << endl;
-
-        for (; flow > 0; --flow) {
-            path.clear();
-            used.assign(n, false);
-            dfs1(s);
-
-            cout << sz(path) << ' ';
-
-            for (auto i : path) {
-                --E[i].flow;
-                ++E[i ^ 1].flow;
-                cout << i / 4 + 1 << ' ';
-            }
-
-            cout << endl;
-        }
+        return cost;
     }
 };
