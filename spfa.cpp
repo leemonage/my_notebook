@@ -28,3 +28,4 @@ vector<ll> spfa(int s) {
     
     return D;
 }
+
