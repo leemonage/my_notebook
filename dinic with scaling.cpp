@@ -1,5 +1,5 @@
 /**
-  *   maxflow O(V E logC)
+  *  maxflow O(V E logC)
   */
 
 struct flow_network {
