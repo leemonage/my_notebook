@@ -46,26 +46,6 @@ struct mincost {
         return false;
     }
 
-    vector<int> path;
-
-    void dfs1(int v) {
-        used[v] = true;
-
-        if (v == t)
-            return ;
-
-        for (auto to : g[v])
-            if (!used[E[to].v] && E[to].flow > 0) {
-                path.push_back(to);
-                dfs1(E[to].v);
-
-                if (E[path.back()].v == t)
-                    return ;
-
-                path.pop_back();
-            }
-    }
-
     ll work(int expected_flow) {
         bool run;
         vector<ll> D(n, INF * INF), phi;
