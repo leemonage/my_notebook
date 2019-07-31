@@ -2,6 +2,8 @@
   *  maxflow O(V^2 E)
   */
 
+using ll = long long;
+
 struct flow_network {
     struct edge {
         int u, v;
